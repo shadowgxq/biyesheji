@@ -1,0 +1,60 @@
+<!--pages/shopcart/shopcart.wxml-->
+<view class="shopcart">
+  <!--title-top start  -->
+  <view class="title-top">
+    <view class="left">共{{shopCartList.length}}件商品</view>
+    <view class="right" bindtap="toDelete">删除</view>
+  </view>
+  <!-- title-top end -->
+  <!-- list start -->
+  <view class="list">
+    <view class="item" wx:for="{{shopCartList}}" wx:key="*this" >
+      <checkbox-group>
+        <checkbox value="1" checked="{{item.isChecked}}" data-id="{{item.Id}}" bindtap="chooseChecked"></checkbox>
+      </checkbox-group>
+      <view class="item-img" data-goodsid="{{item.GoodsNo}}" bindtap="godetail">
+        <image src="{{item.GoodsImage}}"></image>
+      </view>
+      <view class="content">
+        <view class="content-name">
+          {{item.Title}}
+        </view>
+        <view class="content-weight">规格:2.5kg</view>
+        <view class="content-info">
+          <text class="text">单价:</text>
+          <text class="price orange">￥{{item.SaleAmount}}</text>
+          <view class="btn-price">
+            <view class="reduce" bindtap="toreduce" data-reduce="{{item.Id}}">-</view>
+            <input type="number" value="{{item.Quantity}}">2</input>
+            <view class="add" bindtap="toadd" data-add="{{item.Id}}">+</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    
+    
+  </view>
+  <!-- list end -->
+  <!-- bottom-count start -->
+  <view class="bottom-count">
+    <checkbox-group>
+      <checkbox value="1" checked="{{isCheckedAll}}"  bindtap="chooseCheckedAll"></checkbox>
+      <text>全选</text>
+    </checkbox-group>
+    <view class="all">
+      <text style="padding-right:20rpx;">合计:</text>  
+     <text class="all-price orange">￥{{totalPrice}}</text>
+    </view>
+    <view class="compute {{totalPrice==0?'default':'orange1'}}" bindtap="toPay">
+      去结算
+    </view>
+  </view>
+  <!-- bottom-count end -->
+   <!-- zhezhao start -->
+  <view class="zhezhao" wx:if="{{shopCartList.length<=0}}">
+    <image src="/images/cry.png"></image>
+    <view class="title">购物车空空如也~</view>
+    <view class="tip" bindtap="toHome">前往添加商品</view>
+  </view>
+  <!-- zhezhao end -->
+</view>

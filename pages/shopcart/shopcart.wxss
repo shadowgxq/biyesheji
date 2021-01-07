@@ -1,0 +1,156 @@
+/* pages/shopcart/shopcart.wxss */
+/* top */
+.shopcart {
+  height: 100vh;
+  background-color: #f5f5f5;
+}
+.shopcart .title-top {
+  padding: 20rpx;
+  display: flex;
+  justify-content: space-between;
+  color: #333;
+}
+.shopcart .list {
+  background-color: #fff;
+}
+/* list部分 */
+.list {
+  padding: 0 20rpx 0rpx;
+  margin-bottom: 110rpx;
+}
+.list .item {
+  display: flex;
+  align-items: center;
+  padding: 20rpx 0;
+  border-bottom: 2rpx solid #ddd;
+  background-color: #fff;
+}
+.list .item .item-img {
+  width: 180rpx;
+  height: 180rpx;
+  padding:20rpx;
+}
+.list .item .item-img image {
+  width: 100%;
+  height: 100%;
+}
+.list .item .content {
+  flex: 1;
+  color: #333;
+  font-size: 26rpx;
+}
+.list .item .content .content-name {
+  margin-top: -10rpx;
+}
+.list .item .content .content-weight {
+  padding:32rpx 0;
+}
+.list .item .content .content-info {
+  display: flex;
+  align-items: center;
+}
+.list .item .content .content-info .text {
+  width: 70rpx;
+}
+.list .item .content .content-info  .price {
+  flex: 1;
+  font-size: 32rpx;
+}
+.list .item .content .content-info .btn-price {
+  display: flex;
+  font-size: 32rpx;
+}
+
+.content-info .reduce {
+  width: 50rpx;
+  height: 50rpx;
+  text-align: center;
+  border: 2rpx solid #ccc;
+  border-right: none;
+  border-top-left-radius: 10rpx;
+  border-bottom-left-radius: 10rpx;
+}
+.content-info input {
+  width: 80rpx;
+  height: 50rpx;
+  text-align: center;
+  border: 2rpx solid #ccc;
+}
+.content-info .add {
+  width: 50rpx;
+  height: 50rpx;
+  text-align: center;
+  border: 2rpx solid #ccc;
+  border-left: none;
+  border-top-right-radius: 10rpx;
+  border-bottom-right-radius: 10rpx;
+}
+
+/* bottom-count的样式 */
+.bottom-count {
+  display: flex;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #fff;
+  align-items: center;
+  padding: 10rpx 20rpx;
+  box-sizing: border-box;
+  z-index: 100;
+  box-shadow: 2px 2px 10px #999;
+}
+.bottom-count checkbox-group text {
+  padding-right: 32rpx;
+}
+.bottom-count .all{
+  flex: 1;
+  font-size: 32rpx;
+  margin-top: -10rpx;
+}
+.bottom-count .all .all-price {
+  font-size: 32rpx;
+}
+.bottom-count .compute{
+  padding: 20rpx 10rpx;
+  border-radius: 40rpx;
+  color: #fff;
+  font-size: 28rpx;
+}
+.bottom-count .default {
+  background-color: #bbb;
+}
+.bottom-count .orange1 {
+  background-color: #f1c237;
+}
+.zhezhao {
+  width: 100%;
+  height: 100vh;
+  background-color: #f5f5f5;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  font-size: 28rpx;
+  text-align: center;
+}
+/* zhezhao */
+.zhezhao .title {
+  color: #333;
+  font-size: 28rpx;
+}
+.zhezhao image {
+  margin-top: 30vh;
+  width: 160rpx;
+  height: 160rpx;
+  margin-bottom: 40rpx;
+}
+.zhezhao .tip {
+  font-size: 36rpx;
+  color: #fe7302;
+  border: 2rpx solid #fe7302;
+  border-radius: 40rpx;
+  padding: 20rpx 100rpx;
+  width: 300rpx;
+  margin:20rpx auto;
+}

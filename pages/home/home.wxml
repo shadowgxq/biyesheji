@@ -1,0 +1,88 @@
+<!--pages/home/home.wxml-->
+<view class="home">
+	<!--search start  -->
+	<view class="search">
+		<view class="tubiao" bindtap="toDetail">
+			<image src="/images/search.png" style="width:26rpx;height:26rpx;padding-left:10rpx" ></image>
+			<text style="padding-left:16rpx">请输入分类名称</text> 
+		</view>
+	</view>
+	<!--search end -->
+	<!-- swiper start -->
+	<view class="swiper-box">
+		<swiper circular="{{circular}}" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+			<block wx:for="{{background}}" wx:key="*this">
+				<swiper-item>
+					<image src="{{item}}"></image>
+				</swiper-item>
+			</block>
+		</swiper>
+	</view>
+	<!-- swiper end -->
+	<!-- huiyuan start -->
+	<view class="huiyuan" bindtap="huiyuan">
+		<view class="left">
+			<image src="/images/car.png"></image>
+			<text>加入会员·每年节省花费806元</text>
+		</view>
+		<view class="kaika">五折开卡</view>
+	</view>	
+	<view class="nav">
+			<view class="nav-list">
+				<view class="item {{active==500?'active':''}}" id="500" bindtap="changeNavName">
+				<view class="t-icon t-icon-maoliang"></view>
+				<view class="item_name">全部</view>
+				</view>
+				<view class="item {{active==501?'active':''}}" id="501" bindtap="changeNavName">
+				<view class="t-icon t-icon-maoliangpen"></view>
+				<view class="item_name">猫粮</view>
+				</view>
+				<view class="item {{active==502?'active':''}}" id="502" bindtap="changeNavName">
+				<view class="t-icon t-icon-dog"></view>
+				<view class="item_name">零食</view>
+				</view>
+				<view class="item {{active==503?'active':''}}" id="503" bindtap="changeNavName">
+				<view class="t-icon t-icon-gouliang"></view>
+				<view class="item_name">玩具</view></view>
+				<view class="item {{active==504?'active':''}}" id="504" bindtap="changeNavName">
+				<view class="t-icon t-icon-gouliang1"></view>
+				<view class="item_name">猫咪零食</view></view>
+				<view class="item {{active==505?'active':''}}" id="505" bindtap="changeNavName">
+				<view class="t-icon t-icon-CatFootprint"></view>
+				<view class="item_name">狗粮</view></view>
+				<view class="item {{active==506?'active':''}}" id="506" bindtap="changeNavName">
+				<view class="t-icon t-icon-dog1"></view>
+				<view class="item_name">狗狗</view></view>
+				<view class="item {{active==507?'active':''}}" id="507" bindtap="changeNavName">
+				<view class="t-icon t-icon-cat"></view>
+				<view class="item_name">狗粮</view></view>
+			</view>
+	</view>
+	<!-- nav end -->
+
+	<!-- goods start -->
+	<view class="goods">
+		<view class="goods-item" wx:for="{{goodsdatas}}" wx:key="id" data-item="{{item}}" data-goodsid="{{item.GoodsNo}}" bindtap="godetail">
+			<view class="goods-pic">
+				<image class="img" src="{{item.GoodsImage}}" mode="aspectFit"></image>
+			</view>
+			<view class="goods-content">
+				<view class="title">{{item.Title}}</view>
+				<view class="price_b" hover-class="none" hover-stop-propagation="false">
+				<view class="price">￥ {{item.SaleAmount}}</view>
+				<view class="sell" hover-class="none" hover-stop-propagation="false">
+					已售{{sellcount}}件
+				</view>
+				</view>
+			</view>
+		</view>
+		<view class="computed" wx:if="{{isComputed}}">没有更多啦~</view>
+	</view>
+	<!-- goods end -->
+	<!-- 返回顶部 start -->
+	<view class="backTop" bindtap="toTop">
+		<image src="/images/top.png"></image>
+	</view>
+	<!-- 返回顶部 end -->
+
+</view>

@@ -1,0 +1,61 @@
+<!--pages/pets/pets.wxml-->
+<view class="pets">
+  <!-- pets start -->
+  <view class="list">
+    <view class="item">
+      <view class="goods-top">
+        <view class="left">
+          神犬小七
+        </view>
+        <view class="right">
+          小名：小七
+        </view>
+      </view>
+      <view class="content">
+        <view class="content-img">
+          <image src="/images/swiper1.jpg" style="border-radius:20rpx"></image>
+        </view>
+        <view class="content-right">
+          <view class="content-title">
+            神犬中的佼佼者
+          </view>
+          <view class="content-price">代号：001 <text style="color:#999;text-decoration: line-through;">NO 007</text></view>
+          <view class="content-time">
+            特长： <text>睡觉</text>
+          </view>
+          <view class="bianhao">
+            爱好： <text>吃饭 & 游泳</text>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="item" style="background: rgba(67, 192, 234, 0.176);">
+      <view class="goods-top">
+        <view class="left">
+          嘟教授
+        </view>
+        <view class="right">
+          小名：嘟嘟
+        </view>
+      </view>
+      <view class="content">
+        <view class="content-img">
+          <image src="/images/swiper2.jpg" style="border-radius:20rpx"></image>
+        </view>
+        <view class="content-right">
+          <view class="content-title">
+            我就是我，不一样的自我
+          </view>
+          <view class="content-price">代号：002 <text style="color:#999;text-decoration: line-through;">NO 007</text></view>
+          <view class="content-time">
+            特长： <text>卖萌</text>
+          </view>
+          <view class="bianhao">
+            爱好： <text>打架 & 吃饭</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- pets end -->
+</view>

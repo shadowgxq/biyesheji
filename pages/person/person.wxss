@@ -1,0 +1,42 @@
+/* pages/person/person.wxss */
+.person {
+  height: 100vh;
+}
+
+.person image {
+  width: 100%;
+  height: 100%;
+}
+
+.item {
+  background: #fff;
+  position: fixed;
+  top: 24vh;
+  left: 3%;
+  right: 0;
+  width: 680rpx;
+  padding: 0 20rpx;
+  opacity: .8;
+  border-radius: 20rpx;
+}
+
+.item view {
+  padding: 20rpx;
+  font-size: 36rpx;
+}
+
+.item view image {
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 50%;
+}
+.denglu {
+  position:fixed;
+  top:40vh;
+  left: 50%;
+  transform:translateX(-50%) ;
+  border: 2px solid skyblue;
+  padding: 20rpx 40rpx;
+  border-radius: 20rpx;
+  color: skyblue;
+}

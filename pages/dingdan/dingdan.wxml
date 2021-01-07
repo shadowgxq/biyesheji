@@ -1,0 +1,54 @@
+<view class= "dingdan">
+  <view class= "navBar">
+    <view class="navBar_item {{activeIndex === 0 ?'active':''}}" data-index="0"  bindtap="switchItem">全部订单</view>
+    <view class="navBar_item {{activeIndex === 1 ?'active':''}}" data-index="1" bindtap="switchItem">待支付</view>
+    <view class="navBar_item {{activeIndex === 2 ?'active':''}}" data-index="2" bindtap="switchItem">待发货</view>
+    <view class="navBar_item {{activeIndex === 3 ?'active':''}}" data-index="3" bindtap="switchItem">待收货</view>
+    <view class="navBar_item {{activeIndex === 4 ?'active':''}}" data-index="4" bindtap="switchItem">已完成</view>
+  </view>
+  <view class="content">
+    <view class="content_item"  wx:for="{{orderList}}" wx:for-item="item1" wx:if="{{orderList.lenght !== 0}}">
+    <view class="status_data">{{item1.statusData}}</view>
+      <view class="item" wx:for="{{item1.list}}" wx:for-item="item2">
+      <view class="item_title">
+        <view><span class="iconfont icon-shop"></span>{{item2.ClassifyName}}</view>
+      </view>
+      <view class="item_content">
+        <view class="item_img">
+          <image class="" src="{{item2.GoodsImage}}" mode="aspectFill"/>
+        </view>
+        <view class="item_text">
+          <view>{{item2.Title}}</view>
+          <view>七天无理由退货</view>
+          <view>￥  {{item2.SaleAmount}}   X1</view>
+        </view>
+      </view>
+      </view>
+       <view class="item_bottom">
+        <view class= "daishouhuo" wx:if="{{item1.status==0}}">
+          <view>取消订单</view>
+          <view>找人代付</view>
+          <view bindtap="toPay" data-id="{{item1._id}}">去支付</view>
+        </view>
+        <view class= "daishouhuo" wx:if="{{item1.status==1}}">
+          <view>查看订单</view>
+          <view>申请退款</view>
+          <view>物流信息</view>
+          <view>联系卖家</view>
+        </view>
+        <view class= "daishouhuo" wx:if="{{item1.status==2}}">
+          <view>再次购买</view>
+          <view>申请退款</view>
+          <view>确认收货</view>
+          <view>查看物流</view>
+        </view>
+        <view class= "daishouhuo" wx:if="{{item1.status==3}}">
+          <view>查看物流</view>
+          <view>退货退款</view>
+          <view>追加评论</view>
+          <view bindtap="toBuy">再次购买</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

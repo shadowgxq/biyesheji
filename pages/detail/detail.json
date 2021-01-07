@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "goods-list": "../../components/GoodsList"
+  },
+  "navigationBarTitleText": "详情"
+}

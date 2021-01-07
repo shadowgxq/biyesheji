@@ -1,0 +1,84 @@
+/* pages/search/search.wxss */
+/* search 开始 */
+.search {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  background-color: #e43130;
+  z-index: 9999;
+  padding: 16rpx;
+  box-sizing:border-box;
+  display: flex;
+  font-size: 26rpx;
+  color: #ccc;
+}
+.search .tubiao {
+  border: 2rpx solid #f5f5f5;
+  border-radius: 80rpx;
+  background-color: #fff;
+  width: 100%;
+  padding: 10rpx;
+  box-sizing: border-box;
+}
+/* goods的内容 */
+.goods {
+  margin-top: 100rpx;
+}
+.goods-item {
+  margin-top: 10rpx;
+  padding: 20rpx;
+  display: flex;
+  border-bottom: 2rpx solid #eee;
+}
+.goods .goods-pic{
+  width: 220rpx;
+  height: 220rpx;
+}
+.goods .goods-pic image{
+  width: 220rpx;
+  height: 220rpx;
+}
+.goods .goods-content {
+  flex:1;
+  padding-left: 16rpx;
+}
+.goods .goods-content .title {
+  font-size: 32rpx;
+  padding-top: 12rpx;
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+.goods .goods-content .brand {
+  color:#999;
+  font-size: 24rpx;
+  padding: 40rpx 0;
+}
+.goods .goods-content .price {
+  color: #f1c237;
+  font-size: 40rpx;
+}
+.goods .computed {
+  text-align: center;
+  padding: 20rpx;
+  font-size: 28rpx;
+  color: #999;
+}
+/* 返回顶部 */
+.backTop {
+  position: fixed;
+  z-index: 99999;
+  bottom: 20rpx;
+  right: 20rpx;
+  width: 100rpx;
+  height: 100rpx;
+}
+.backTop image {
+  width: 100%;
+  height: 100%;
+}

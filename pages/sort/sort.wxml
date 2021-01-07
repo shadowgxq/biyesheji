@@ -1,0 +1,45 @@
+<!--pages/sort/sort.wxml-->
+<view class="sort">
+	<!-- left start -->
+	<view class="sort-left">
+		<view class="item {{current==1000?'current':''}}" data-index="1000" bindtap="toChooseName"> <text>全部</text> </view>
+		<view class="item {{current==1001?'current':''}}" data-index="1001" bindtap="toChooseName"><text>猫咪粮食</text> </view>
+		<view class="item {{current==1002?'current':''}}" data-index="1002" bindtap="toChooseName"><text>狗粮</text> </view>
+		<view class="item {{current==1003?'current':''}}" data-index="1003" bindtap="toChooseName"><text>其他</text> </view>
+		<view class="item {{current==1004?'current':''}}" data-index="1004" bindtap="toChooseName"><text>最新更新</text></view>
+		<view class="item {{current==1005?'current':''}}" data-index="1005" bindtap="toChooseName"><text>热门</text></view>
+		<view class="item {{current==1006?'current':''}}" data-index="1006" bindtap="toChooseName"><text>推荐</text></view>
+	</view>
+	<!-- left end -->
+	<!-- right start -->
+	<view class="sort-right">
+		<view class="search-box">
+			<view class="search" bindtap="toSearch">
+				<image src="/images/search.png"></image>
+				请输入分类名称
+			</view>
+		</view>
+		<!-- goods start -->
+		<view class="goods">
+			<view class="goods-item" wx:for="{{goodsdatas}}" wx:key="id" data-goodsid="{{item.GoodsNo}}" bindtap="godetail">
+				<view class="goods-pic">
+					<image src="{{item.GoodsImage}}"></image>
+				</view>
+				<view class="goods-content">
+					<view class="title">{{item.Title}}</view>
+					<view class="brand">{{item.Brand}}</view>
+					<view class="price">￥ {{item.SaleAmount}}</view>
+				</view>
+			</view>
+			<view class="computed" wx:if="{{isComputed}}">没有更多啦~</view>
+		</view>
+		<!-- goods end -->
+	</view>
+	<!-- right end -->
+		<!-- 返回顶部 start -->
+	<view class="backTop" bindtap="toTop">
+		<image src="/images/top.png"></image>
+	</view>
+	<!-- 返回顶部 end -->
+
+</view>

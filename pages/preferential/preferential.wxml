@@ -1,0 +1,18 @@
+<!--pages/preferential/preferential.wxml-->
+<view class="preferentail">
+  <view class="top">
+    注：此券仅能用于该小程序，逾期无效
+  </view>
+  <view class="tab">
+    <view class="left {{current==true?'current':''}}" bindtap="getuser">可用优惠券</view>
+    <view class="right {{current==true?'':'current'}}" bindtap="noUser">不可用优惠券</view>
+  </view>
+  <view class="content" wx:if="{{current}}">
+    <image src="/images/youhuiquan2.png"></image>
+    <image src="/images/youhuiquan3.png" ></image>
+    <image src="/images/youhuiquan2.png"></image>
+  </view>
+  <view class="content" wx:else>
+    <image src="/images/youhuiquan1.png" style="height:800rpx;width:700rpx;"></image>
+  </view>
+</view>

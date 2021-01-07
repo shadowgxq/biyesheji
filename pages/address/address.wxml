@@ -1,0 +1,32 @@
+<view class="address" >
+  <view class="address_item" wx:for="{{address}}" wx:key="tel">
+    <view class="top">
+      <view class="usename">{{item.username}}</view>
+      <view class="tel">{{item.tel}}</view>
+    </view>
+    <view class="bottom">
+      <view wx:if='{{item.default==true}}' class="def">[默认]</view>
+      <view>{{item.address}}</view>
+    </view>
+  </view>
+  <view class="address_add" wx:if="{{showAdd == true}}">
+  <view class="add_item">
+    <label for="">姓名:</label>
+    <input type="text" model:value="{{username}}" placeholder="输入框默认内容"/>
+  </view>
+  <view class="add_item">
+    <label for="">电话:</label>
+    <input type="text" model:value="{{tel}}" placeholder="输入框默认内容"/>
+  </view>
+  <view class="add_item">
+    <label for="">地址:</label>
+    <input type="text" model:value="{{toADD}}" placeholder="输入框默认内容"/>
+  </view>
+  <view class="config" bindtap="configAdd">
+      确认添加
+  </view>
+  </view>
+  <view class="add" bindtap="add">
+      +添加新地址
+  </view >
+</view>

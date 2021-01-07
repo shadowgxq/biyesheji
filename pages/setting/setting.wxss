@@ -1,0 +1,46 @@
+.setting{
+  width: 100%;
+  height: 100vh;
+  background-color: #f5f5f5;
+}
+.setting .user_pic{
+  background-color: #fff;
+  height: 120rpx;
+  display: flex;
+  border-bottom: 20rpx solid rgba(100, 100, 100, .2);
+}
+.setting .user_pic image{
+  margin-left: 60rpx;
+  margin-top: 20rpx;
+  height: 80rpx;
+  width: 80rpx;
+}
+.setting .user_pic .username{
+  margin-top: 20rpx;
+  margin-left: 30rpx;
+}
+.setting .user_info{
+  background-color: #fff;
+  padding: 0rpx 10rpx;
+}
+.setting .user_info .info_item{
+  padding: 30rpx 20rpx;
+  border-bottom: 1px solid rgba(100,100,100,.1);
+  display: flex;
+  justify-content: space-between;
+}
+.setting .user_info .info_item view:nth-child(1) {
+}
+.setting .user_info .info_item view:nth-child(2) {
+  color: rgba(100, 100, 100, .6);
+}
+.layout{
+  width: 80%;
+  margin-left:75rpx;
+  background-color: orange;
+  color: #fff;
+  text-align: center;
+  height: 80rpx;
+  line-height: 80rpx;
+  margin-top: 60rpx;
+}

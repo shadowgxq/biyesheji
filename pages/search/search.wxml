@@ -1,0 +1,33 @@
+<!--pages/search/search.wxml-->
+<view class="search-box">
+	<!--search start  -->
+	<view class="search">
+		<view class="tubiao">
+			<view style="display:flex;align-items:center;">
+				<image src="/images/search.png" style="width:26rpx;height:26rpx;padding-left:10rpx"></image>
+				<input type="text" placeholder="请输入分类名称" focus="true" style="padding-left:16rpx" bindinput="toSearch"></input>
+			</view>
+		</view>
+	</view>
+	<!--search end -->
+  <!-- goods start -->
+	<view class="goods">
+		<view class="goods-item" wx:for="{{goodsdatas}}" wx:key="id" data-goodsid="{{item.GoodsNo}}" bindtap="toDetail" >
+			<view class="goods-pic">
+				<image src="{{item.GoodsImage}}"></image>
+			</view>
+			<view class="goods-content">
+				<view class="title">{{item.Title}}</view>
+				<view class="brand">{{item.Brand}}</view>
+				<view class="price">￥ {{item.SaleAmount}}</view>
+			</view>
+		</view>
+		<view class="computed" wx:if="{{isComputed}}">没有更多啦~</view>
+	</view>
+	<!-- goods end -->
+	<!-- 返回顶部 start -->
+	<view class="backTop" bindtap="toTop">
+		<image src="/images/top.png"></image>
+	</view>
+	<!-- 返回顶部 end -->
+</view>

@@ -1,0 +1,33 @@
+<!--pages/pay/pay.wxml-->
+<view class="pay">
+<view class="address">请选择收货地址</view>
+<view class="discount">
+  <span>优惠卷</span>
+  <span>目前无可用优惠卷</span>
+</view>
+  <view class="list">
+    <view class="item" wx:for="{{payList}}" wx:key="*this" >
+      <view class="item-img" data-goodsid="{{item.GoodsNo}}" bindtap="godetail">
+        <image src="{{item.GoodsImage}}"></image>
+      </view>
+      <view class="content">
+        <view class="content-name">
+          {{item.Title}}
+        </view>
+        <view class="content-weight">规格:2.5kg</view>
+        <view class="content-info">
+          <text class="text">单价:</text>
+          <text class="price orange">￥{{item.SaleAmount}}</text>
+        </view>
+      </view>
+    </view>
+    </view>
+<view class="liuyan">
+  <view>买家留言</view>
+  <view>请填写备注</view>
+</view>
+<view class="zhifu">
+  <view class="total">总价: ￥{{totalPrice}}</view>
+  <view class="topay" bindtap="topay">去支付</view>
+</view>
+</view>

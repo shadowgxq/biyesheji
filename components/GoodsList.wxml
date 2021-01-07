@@ -1,0 +1,17 @@
+	<view class="goods">
+		<view class="goods-item" wx:for="{{goodsdatas}}" wx:key="id" data-goodsid="{{item.GoodsNo}}" bindtap="godetail">
+			<view class="goods-pic">
+				<image class="img" src="{{item.GoodsImage}}" mode="aspectFit"></image>
+			</view>
+			<view class="goods-content">
+				<view class="title">{{item.Title}}</view>
+				<view class="price_b" hover-class="none" hover-stop-propagation="false">
+				<view class="price">￥ {{item.SaleAmount}}</view>
+				<view class="sell" hover-class="none" hover-stop-propagation="false">
+					已售{{sellcount}}件
+				</view>
+				</view>
+			</view>
+		</view>
+		<view class="computed" wx:if="{{isComputed}}">没有更多啦~</view>
+	</view>

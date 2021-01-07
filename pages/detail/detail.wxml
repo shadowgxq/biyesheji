@@ -1,0 +1,64 @@
+<!--pages/detail/detail.wxml-->
+<view class="detail">
+<!-- swiper start-->
+<view class="swiper">
+  <swiper bindchange="changeSwiper" indicator-dots="{{indicatorDots}}" circular="true"
+        autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{details.SwiperImgList}}" wx:key="*this">
+      <swiper-item>
+        <image src="{{item}}" bindtap="showImage"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="swiper-tips">{{swipertips}}/3</view>
+</view>
+<!-- swiper end-->
+<!-- info start-->
+<view class="info-box">
+  <view class="info-price orange">
+    ￥ {{details.SaleAmount}}
+  </view>
+  <view class="info-title">
+    <text>{{details.Title}}</text>
+    <button open-type="share"><text class="icon-zhuanfa iconfont"></text></button>
+  </view>
+</view>
+<!-- info end-->
+<!-- address start-->
+<view class="address-box">
+  <view class="iconfont icon-dingwei"></view>
+  <view class="address">
+  商家地址：苏州市工业园区仁爱路1号
+  </view>
+</view>
+<!-- address end -->
+<!-- pict start -->
+<view class="pict-box">
+  <view class="pict-item" wx:for="{{details.DetailImgList}}"  wx:key="*this">
+    <image src="{{item}}" mode="widthFix"></image>
+  </view>
+</view>
+<goods-list></goods-list>
+<!-- pict end -->
+<!-- bottom-nav start -->
+<view class="nav-box">
+  <view class="dianpu nav-left" bindtap="toHome">
+    <view class="iconfont icon-shouye"></view>
+    <view>店铺</view>
+  </view>
+  <view class="talk nav-left" bindtap="toTalk">
+    <view class="iconfont icon-zixun1"></view>
+    <view>资讯</view>
+  </view>
+  <view class="shopping nav-left" bindtap="toShopCart">
+    <view class="iconfont icon-gouwuche"></view>
+    <view>购物车</view>
+  </view>
+  <view class="join-shopping nav-right" bindtap="joinCart">
+  加入购物车
+  </view>
+  <view class="buy nav-right" bindtap="buy">
+  立即购买</view>
+</view>
+<!-- bottom-nav end -->
+</view>

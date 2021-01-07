@@ -1,0 +1,29 @@
+<view class="setting">
+  <view class="user_pic">
+    <image src="{{userInfo.avatarUrl}}" mode="aspectFit"></image>      
+    <view class="username">{{userInfo.nickName}}</view>
+  </view>
+  <view class="user_info">
+    <view class="info_item" bindtap="toPets">
+      <view>我的宠物</view>
+      <view>管理自己的宠物</view>
+    </view>
+    <view class="info_item" bindtap="toAdress">
+      <view>地址管理</view>
+      <view>新增/修改地址</view>
+    </view>
+    <view class="info_item" bindtap="safe">
+      <view>账户安全</view>
+      <view></view>
+    </view>
+    <view class="info_item" bindtap="toPerson">
+      <view>关联账号</view>
+      <view>微信等</view>
+    </view>
+    <view class="info_item" bindtap="toPerson">
+      <view>个人信息</view>
+      <view>绑定手机</view>
+    </view>
+  </view>
+  <view class="layout" bindtap="toQuit">退出登录</view>
+</view>

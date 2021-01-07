@@ -1,0 +1,14 @@
+<!--pages/person/person.wxml-->
+<view class="person">
+  <image src="/images/backgrond.jpg"></image>
+  <view class="item" wx:if="{{user}}">
+    <view class="nickName">微信名：<text class="fr">{{user.nickName}}</text></view>
+    <view class="gender">性别：<text class="fr">{{user.gender==1?"男":"女"}}</text></view>
+    <view class="language">语言<text class="fr">{{user.language=="zh_CN"?"中文":"英语"}}</text></view>
+    <view class="country">国家：<text class="fr">{{user.country}}</text></view>
+    <view class="province">省份：<text class="fr">{{user.province}}</text></view>
+    <view class="city">城市：<text class="fr">{{user.city}}</text></view>
+    <view style="position:absolute;top:-110rpx;left:50%;transform: translateX(-50%);"><image src="{{user.avatarUrl}}"></image></view>
+  </view>
+  <view wx:else  class="denglu">请先进行用户登录鸭~</view>
+</view>

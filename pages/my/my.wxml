@@ -1,0 +1,87 @@
+<view class="my">
+	<button open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" wx:if='{{!user.nickName}}'>
+		<view class="login-on">
+			<view class="user">
+				点击登录
+			</view>
+		</view>
+	</button>
+	<view class="login-no" wx:if='{{user.nickName}}'>
+    <view class="img">
+	  	<image src="{{user.avatarUrl}}"></image>
+    </view>
+		<view class="user">
+			<view>
+				{{user.nickName}}
+			</view>
+			<view class="dengji">
+				白金用户
+			</view>
+		</view>
+    <view class="block" hover-class="none" hover-stop-propagation="false">
+      
+    </view>
+    <view class=" iconfont icon-Settingscontroloptions setting" bindtap="toSetting">
+      
+    </view>
+	</view>
+  <view class="bar" wx:if='{{user.nickName}}'>
+      <view class="bar-item" bindtap="topreferentail">
+        <view>8</view>
+        <view>优惠卷</view>
+      </view>
+      <view class="bar-item">
+        <view>135</view>
+        <view>我的积分</view>
+      </view>
+      <view class="bar-item" bindtap="toHistory">
+        <view>20</view>
+        <view>足迹</view>
+      </view>
+      <view class="bar-item">
+        <view>6</view>
+        <view>我的收藏</view>
+      </view>
+  </view>
+  <view class="huiyuan" bindtap="huiyuan">
+  		<view class="left">
+  			<image src="/images/car.png"></image>
+  			<text>加入会员·每年节省花费806元</text>
+  		</view>
+  		<view class="kaika">五折开卡</view>
+  	</view>	
+  <view class="member-box">
+    <view class="order">
+      <view class="order_top">
+        <view>我的订单</view>
+        <view bindtap="toshopcart">查看全部</view>
+      </view>
+      <view class="order_button">
+        <view class="order_item" bindtap="toshopcart">
+          <view class="iconfont icon-pay1" ></view>
+          <view>待支付</view>
+        </view>
+        <view class="order_item" bindtap="toshopcart">
+          <view class="iconfont icon-xjt" ></view>
+          <view>待发货</view>
+        </view>
+        <view class="order_item" bindtap="toshopcart">
+          <view class="iconfont icon-pay" ></view>
+          <view>待收货</view>
+        </view>
+        <view class="order_item" bindtap="toshopcart">
+          <view class="iconfont icon-finishedlist" ></view>
+          <view>已完成</view>
+        </view>
+        <view class="order_item" bindtap="toshopcart">
+          <view class="iconfont icon-shouhou" ></view>
+          <view>退换/售后</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="tuijian">
+    好货推荐
+  </view>
+  <goods-list></goods-list>
+</view>

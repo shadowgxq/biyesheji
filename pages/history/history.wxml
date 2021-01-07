@@ -1,0 +1,13 @@
+ <view class="content">
+    <view class="content_item clearFix"  wx:for="{{orderList}}"  data-goodsid="{{item.GoodsNo}}" wx:if="{{orderList.lenght !== 0}}" bindtap="todetail">
+      <view class="item_content">
+        <view class="item_img">
+          <image class="" src="{{item.GoodsImage}}" mode="aspectFill"/>
+        </view>
+        <view class="item_text">
+          <view>{{item.Title}}</view>
+          <view>￥  {{item.SaleAmount}}   X1</view>
+        </view>
+      </view>
+    </view>
+  </view>
